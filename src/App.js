@@ -4,6 +4,8 @@ import { Col, Row , Menu, Button, Drawer } from "antd";
 import { MenuOutlined } from '@ant-design/icons';
 import Main from './VIews/Main';
 import './style.css';
+import CreateKlub from './VIews/CreateKlub';
+import UpdateSkor from './VIews/UpdateSkor';
 
 function App(){
     const [curr, setCurr] = useState();
@@ -41,6 +43,8 @@ function App(){
             </Row>
             <Routes>
                 <Route path='/' element={<Main/>} />
+                <Route path='/buat-klub' element={<CreateKlub/>} />
+                <Route path='/update-skor' element={<UpdateSkor/>} />
             </Routes>
         </Fragment>
     )
