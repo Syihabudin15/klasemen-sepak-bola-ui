@@ -37,10 +37,10 @@ function CreateKlub(){
             <section title="form buat klub baru">
                 <div className="form-wrap">
                     <Form labelCol={{span: 3}}>
-                        <Form.Item label='Nama Klub'>
+                        <Form.Item label='Nama Klub' rules={[{required: true, whitespace: false}]}>
                             <Input placeholder="Masukan Nama Klub" value={nama} onChange={(e) => setNama(e.target.value)} />
                         </Form.Item>
-                        <Form.Item label='Kota Klub'>
+                        <Form.Item label='Kota Klub' rules={[{required: true, whitespace: false}]}>
                             <Input placeholder="Masukan Kota Klub" value={kota} onChange={(e) => setKota(e.target.value)} />
                         </Form.Item>
                         <p style={{color: 'red'}}>{feed? feed : ''}</p>

@@ -22,7 +22,7 @@ const KlubSlice = createSlice({
         },
         [getAllKlub.rejected]: (state, action) => {
             state.isLoading = false;
-            notification.error({message: action.payload.data.msg});
+            notification.error({message: action.payload.msg});
         },
         [getAllKlub.fulfilled]: (state, action) => {
             state.isLoading = false;

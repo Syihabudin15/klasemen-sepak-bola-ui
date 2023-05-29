@@ -21,7 +21,7 @@ const KlasmenSlice = createSlice({
         },
         [getKlasmen.rejected]: (state, action) => {
             state.isLoading = false;
-            notification.error({message: action.payload.data.msg});
+            notification.error({message: action.payload.msg});
         },
         [getKlasmen.fulfilled]: (state, action) => {
             state.isLoading = false;
