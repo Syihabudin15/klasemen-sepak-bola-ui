@@ -5,6 +5,11 @@ body{
 .menu-mobile{
     display: none;
 }
+.list-klub{
+    background-color: rgb(223, 244, 237);
+    padding: 10px;
+    box-sizing: border-box;
+}
 .main-top{
     padding-top: 100px;
 }
@@ -12,25 +17,18 @@ body{
     text-align: center;
     margin-bottom: 50px;
 }
-.list-history-wrapper{
-    width: 90vw;
-    border: 1px solid #aaa;
-    margin: 20px auto;
-    padding: 10px;
+.list-pertandingan{
+    width: 100vw;
+    padding: 20px;
     box-sizing: border-box;
+}
+.pertandingan-wrap{
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
 }
-.history-wrapper{
-    width: 70%;
-    border-bottom: 1px solid #aaa;
-    padding-bottom: 20px;
-    padding-left: 30px;
-}
-.status-pertandingan{
-    border: 1px solid #aaa;
-    padding: 0 10px;
-    border-radius: 10px;
+.pertandingan-card{
+    width: 80%;
 }
 .form-wrap{
     width: 50vw;
@@ -57,12 +55,6 @@ body{
         display: flex;
         justify-content: flex-end;
         align-items: center;
-    }
-    .list-history-wrapper{
-        width: 97vw;
-    }
-    .history-wrapper{
-        padding-left: 0;
     }
     .form-wrap{
         width: 80vw;
