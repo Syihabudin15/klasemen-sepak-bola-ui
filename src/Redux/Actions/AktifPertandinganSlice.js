@@ -21,7 +21,7 @@ const AktifPertandinganSlice = createSlice({
         },
         [getAktifPertandingan.rejected]: (state, action) => {
             state.isLoading = false;
-            notification.error({message: action.payload.msg});
+            notification.error({message: action.payload ? action.payload.msg : 'Server Error'});
         },
         [getAktifPertandingan.fulfilled]: (state, action) => {
             state.isLoading = false;

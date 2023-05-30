@@ -36,7 +36,7 @@ function EditSkor(){
     return(
         <Fragment>
             <Spin spinning={isLoading}>
-                {datas && 
+                {datas.length === 0 ? <p style={{textAlign: 'center', fontWeight: 'bold', opacity: .7}}>Tidak Ada Pertandingan Aktif</p> :
                     datas.map((e,i) => {
                         return <div key={i}>
                                 <div className='list-edit-skor'>

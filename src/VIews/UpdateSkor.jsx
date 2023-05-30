@@ -1,6 +1,7 @@
 import { Fragment, useEffect } from "react";
+import { useNavigate } from 'react-router-dom';
 import EditSkor from "../Components/EditSkor";
-import { Row, Col, Spin } from 'antd';
+import { Row, Col, Spin, Button } from 'antd';
 import { useDispatch, useSelector } from "react-redux";
 import { getPertandingan } from "../Redux/Actions/PertandinganSlice";
 import CreatePertandingan from "../Components/Utils/CreatePertandingan";
@@ -8,16 +9,18 @@ import CreatePertandingan from "../Components/Utils/CreatePertandingan";
 function UpdateSkor(){
     const { isLoading, data } = useSelector(state => state.pertandingans);
     const dis = useDispatch();
+    const nav = useNavigate();
 
     useEffect(() => {
         dis(getPertandingan('riwayat'));
     }, [dis]);
     return(
         <Fragment>
-            <section title="Buat Peretandingan">
+            <section title="Buat Peretandingan" style={{display: 'flex', gap: 20, margin: 20}}>
                 <CreatePertandingan />
+                <Button onClick={() => nav('/update-all-skor')}>Update All Skor</Button>
             </section>
-            <section title="Edit Skor Pertandingan">
+            <section title="Edit Skor Pertandingan" style={{margin: '50px auto'}}>
                 <section title="daftar Pertandingan Berlangsung">
                     <EditSkor/>
                 </section>

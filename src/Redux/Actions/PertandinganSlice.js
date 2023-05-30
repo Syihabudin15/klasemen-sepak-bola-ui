@@ -21,7 +21,7 @@ const PertandinganSlice = createSlice({
         },
         [getPertandingan.rejected]: (state, action) => {
             state.isLoading = false;
-            notification.error({message: action.payload.msg});
+            notification.error({message: action.payload ? action.payload.msg : 'Server Error'});
         },
         [getPertandingan.fulfilled]: (state, action) => {
             state.isLoading = false;

@@ -7,6 +7,7 @@ import './style.css';
 import CreateKlub from './VIews/CreateKlub';
 import Klasemen from './VIews/Klasemen';
 import UpdateSkor from './VIews/UpdateSkor';
+import UpdateAllSkor from './VIews/UpdateAllSkor';
 
 function App(){
     const [curr, setCurr] = useState();
@@ -47,6 +48,7 @@ function App(){
                 <Route path='/buat-klub' element={<CreateKlub/>} />
                 <Route path='/update-skor' element={<UpdateSkor/>} />
                 <Route path='/klasemen' element={<Klasemen/>} />
+                <Route path='/update-all-skor' element={<UpdateAllSkor/>} />
             </Routes>
         </Fragment>
     )
